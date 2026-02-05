@@ -16,50 +16,65 @@ using namespace std;
 int main()
 {
     
-    /*
+    
+    //declared vector
 	srand(time(0));
-	int row, column;
+	int dimension=0;
 	
-	row=rand()%4+4;
-	column=rand()%4+4;
-	int vector[row][column];
+	dimension=rand()%4+4;
+	char vector[dimension][dimension];
+	
+	char matrix[7][7];
+    bool solved[7][7];
 	
 	
-    for(int i=0;i<row;i++)
-    	for(int j=0;j<column;i++)
+	
+	
+	
+	//fill vector and help stuff
+	
+	for(int i=0;i<n;i++) 
+	{
+        for(int j=0;j<n;j++)
+        {
+            solved[i][j]=false;
+        }
+    }
+    
+    char temp[49];
+    int index = 0;
+    char lettera = 'A';
+    
+    
+    //help cycle for check
+    for(int i=0;i<dimension;i++)
+    	for(int j=0;j<dimension;i++)
     	{
-    		vector[i][j]=1;                   //rand()%4+4;
+    		vector[i][j]=1;                  
     		cout<<"Vector["<<i<<"]["<<j<<"]="<<vector[i][j]<<endl;
     		
 		}
-	*/
 		
 	
+	// do pairs
+	int tot = dimension * dimension;
+    for (int i = 0; i < totale / 2; i++) {
+        temp[index++] = lettera;
+        temp[index++] = lettera;
+        lettera++;
+    }
     
-    /*for(int i=0;i<row;i++)
-    {
-        for(int j=0;i<column;j++)
-    	cout<<vector[i];
-	}*/
+    // dispari case
+    if (tot % 2 == 1) {
+        temp[index++] = '0';
+    }
     
-    
-    
-    
-    //generazione casuale
-    /*
-    if(row*column)%2!=0)
-    {
-    	int rowd = rand()%((sizeof(vector[])/sizeof(vector[0)-1);
-    	int columnd = rand()%((sizeof(vector[])/sizeorowdf(vector[0)-1);
-    	vector[rowd][columnd]=0;
-    	
-    	cout<<"PROVERKAAAAAAA VECTOR CON ZERO RAVNO VECTOR["<<rowd<<"]["<<columnd
-	}
+  
     
     
+   
     
     
-    */
     
     
     
