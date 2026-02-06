@@ -56,13 +56,7 @@ int main()
 		}
 		
 	
-	// do pairs
-	int tot = dimension * dimension;
-    for (int i = 0; i < totale / 2; i++) {
-        temp[index++] = lettera;
-        temp[index++] = lettera;
-        lettera++;
-    }
+	
     
     // dispari case
     if (tot % 2 == 1) {
