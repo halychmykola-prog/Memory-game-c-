@@ -13,7 +13,8 @@ int main()
 	int dimension=0;
 	
 	dimension=rand()%4+4;
-	char vector[dimension][dimension];
+	const int DIM=dimension;
+	char vector[DIM][DIM];
     bool solved[7][7];
 	
 	
@@ -22,13 +23,12 @@ int main()
 	
 	//fill vector and help stuff
 	
-	int n=49;
 	
-	for(int i=0;i<n;i++) 
-	{
-        for(int j=0;j<n;j++)
+	for(int i=0;i<7;i++)
+    {
+        for(int j=0;j<7;j++)
         {
-            solved[i][j]=false;
+            solved[i][j] = false;
         }
     }
     
@@ -65,30 +65,28 @@ int main()
 	
 	
 	
+	//check for dispari
 	
+	int total=dimension*dimension;
+	if((dimension*dimension)%2==1)
+	{
+		vector[dimension-1][dimension-1]='0';
+		total=total-1;
+		
+	}
 	
 	
     
     //help cycle for check
     
     for(int i=0;i<dimension;i++)
-    	for(int j=0;j<dimension;i++)
+    	for(int j=0;j<dimension;j++)
     	{
-    		vector[i][j]='#';                  
+    	    if (vector[i][j] != '0')
+                vector[i][j] = '#';
     		cout<<"Vector["<<i<<"]["<<j<<"]="<<vector[i][j]<<endl;
     		
 		}
-	
-	
-	//check for dispari
-	
-	int total=dimension*dimension;
-	if((dimension*dimension/2)%2==1)
-	{
-		vector[dimension][dimension]=0;
-		total=total-1;
-		
-	}
 		
 		
 		
@@ -101,8 +99,8 @@ int main()
 	for(int i=0;i<total;i++)
 	{
 		
-		row=rand()%4+4;
-		column=rand()%4+4;
+		row=rand()%dimension;
+		column=rand()%dimension;
 		
 		if(vector[row][column]=='#')
 		{
@@ -110,7 +108,7 @@ int main()
 		}
 		else
 		{
-		
+		    i--;
 		}
 		
 		cout<<endl;
@@ -125,7 +123,7 @@ int main()
 	
 	for(int i=0;i<dimension;i++)
 	{
-		for(int j=0;j<dimension;i++)
+		for(int j=0;j<dimension;j++)
 		{
 			cout<<vector[i][j];
 		}
