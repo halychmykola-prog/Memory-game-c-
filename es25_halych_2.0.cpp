@@ -44,6 +44,7 @@ int main()
 	}
 	
 	//controllo stampa alfabet
+	/*
 	int check=0;
 	cout<<"Vuoi stampare alfabet? ";
 	cin>>check;
@@ -62,7 +63,7 @@ int main()
 	{
 		return 0;
 	}
-	
+	*/
 	
 	
 	//check for dispari
@@ -84,7 +85,7 @@ int main()
     	{
     	    if (vector[i][j] != '0')
                 vector[i][j] = '#';
-    		cout<<"Vector["<<i<<"]["<<j<<"]="<<vector[i][j]<<endl;
+    		//cout<<"Vector["<<i<<"]["<<j<<"]="<<vector[i][j]<<endl;
     		
 		}
 		
@@ -95,7 +96,7 @@ int main()
 	int row=0,column=0;
 	
 	
-	cout<<"inizia riempire"<<endl;
+	//cout<<"inizia riempire"<<endl;
 	for(int i=0;i<total;i++)
 	{
 		
@@ -110,22 +111,19 @@ int main()
 		{
 		    i--;
 		}
-		
-		cout<<endl;
-		
 
 	}
 	
 	
 	//stampa tabella
 	cout<<"inizia stampare tabella"<<endl;
-	cout<<endl<<endl<<endl<<endl<<endl;
+	cout<<endl<<endl<<endl;
 	
 	for(int i=0;i<dimension;i++)
 	{
 		for(int j=0;j<dimension;j++)
 		{
-			cout<<vector[i][j];
+			cout<<vector[i][j]<<" ";
 		}
 		
 		
@@ -133,7 +131,9 @@ int main()
 		
 	}
 		
-		
+	
+	//processo 
+	
 	
 	
 	
